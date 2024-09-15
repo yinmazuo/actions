@@ -21,6 +21,7 @@
     "@solana/actions": "^1.6.1",
     "@solana/spl-token-registry": "^0.2.4574",
     "@solana/web3.js": "^1.95.2",
+    "@vercel/node": "^3.2.14",
     "cors": "^2.8.5",
     "express": "^4.19.2",
     "hono": "^4.5.0",
