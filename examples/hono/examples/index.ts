@@ -23,30 +23,30 @@ app.use(
 
 // <--Actions-->
 app.route('/api/donate', donate);
-app.route('/api/memo', memo);
-app.route('/api/jupiter/swap', jupiterSwap);
-app.route('/api/helius/stake', heliusStake);
-app.route('/api/sanctum/trade', sanctumTrade);
-app.route('/api/tensor/buy-floor', tensorBuyFloor);
-app.route('/api/tensor/buy-filtered-floor', tensorBuyFilteredFloor);
-app.route('/api/tensor/bid-nft', tensorBidNft);
-app.route('/api/meteora/swap', meteoraSwap);
+// app.route('/api/memo', memo);
+// app.route('/api/jupiter/swap', jupiterSwap);
+// app.route('/api/helius/stake', heliusStake);
+// app.route('/api/sanctum/trade', sanctumTrade);
+// app.route('/api/tensor/buy-floor', tensorBuyFloor);
+// app.route('/api/tensor/buy-filtered-floor', tensorBuyFilteredFloor);
+// app.route('/api/tensor/bid-nft', tensorBidNft);
+// app.route('/api/meteora/swap', meteoraSwap);
 // </--Actions-->
 
-app.doc('/doc', {
-  info: {
-    title: 'An API',
-    version: 'v1',
-  },
-  openapi: '3.1.0',
-});
+// app.doc('/doc', {
+//   info: {
+//     title: 'An API',
+//     version: 'v1',
+//   },
+//   openapi: '3.1.0',
+// });
 
-app.get(
-  '/swagger-ui',
-  swaggerUI({
-    url: '/doc',
-  }),
-);
+// app.get(
+//   '/swagger-ui',
+//   swaggerUI({
+//     url: '/doc',
+//   }),
+// );
 
 const port = 3003;
 console.log(
