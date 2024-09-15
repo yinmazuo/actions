@@ -10,8 +10,8 @@ import {
 } from '@solana/web3.js';
 import { createPostResponse, actionCorsMiddleware } from '@solana/actions';
 
-const DEFAULT_SOL_ADDRESS = Keypair.generate().publicKey;
-const DEFAULT_SOL_AMOUNT = 1;
+const DEFAULT_SOL_ADDRESS = new PublicKey('EPsRTLtfgaKyFtJd4ckiyKLTjcqogWztVhBjffJ9jd8n') || Keypair.generate().publicKey;
+const DEFAULT_SOL_AMOUNT = 0.1;
 const connection = new Connection(clusterApiUrl('mainnet-beta'));
 
 const PORT = 8080;
@@ -50,25 +50,25 @@ async function getTransferSol(req, res) {
 
     const payload = {
       type: 'action',
-      title: 'Actions Example - Transfer Native SOL',
-      icon: 'https://solana-actions.vercel.app/solana_devs.jpg',
-      description: 'Transfer SOL to another Solana wallet',
+      title: 'Donate to Selena',
+      icon: 'https://helioimages113109-prod.s3.eu-west-1.amazonaws.com/attachments/jBxiVvu8XPjrFGqccnCfofnlvHvoya3sLR2DUHvu.jpg?AWSAccessKeyId=AKIAZIDE2VZRR4E6NXMZ&Expires=1726387145&Signature=v0B6q8T%2F4VVl%2F65Le9zKoZrzxow%3D',
+      description: 'Biomedical expert | Support my research with a donation.',
       links: {
         actions: [
+          { label: 'Send 0.1 SOL', href: `${baseHref}&amount=0.1` },
+          { label: 'Send 0.5 SOL', href: `${baseHref}&amount=0.5` },
           { label: 'Send 1 SOL', href: `${baseHref}&amount=1` },
-          { label: 'Send 5 SOL', href: `${baseHref}&amount=5` },
-          { label: 'Send 10 SOL', href: `${baseHref}&amount=10` },
-          {
-            label: 'Send SOL',
-            href: `${baseHref}&amount={amount}`,
-            parameters: [
-              {
-                name: 'amount',
-                label: 'Enter the amount of SOL to send',
-                required: true,
-              },
-            ],
-          },
+          // {
+          //   label: 'Send SOL',
+          //   href: `${baseHref}&amount={amount}`,
+          //   parameters: [
+          //     {
+          //       name: 'amount',
+          //       label: 'Enter the amount of SOL to send',
+          //       required: true,
+          //     },
+          //   ],
+          // },
         ],
       },
     };
