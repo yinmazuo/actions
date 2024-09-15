@@ -1,0 +1,7 @@
+{
+    "version": "2",
+    "build": {
+        "src": "./examples/express/transfer-sol/server.js",
+        "use": "@vercel/node"
+    }
+}
